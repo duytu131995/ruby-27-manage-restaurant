@@ -1,9 +1,26 @@
-<div id="layoutSidenav">
-  <div id="layoutSidenav_content">
-    <div class="list_departments">
-      <ul class="list-group">
-        <%= render @departments %>
-      </ul>
+<div class="list_departments">
+  <div class="top-title">
+    <div class="title">
+      <h2><%= t "admin.departments.index.title_text" %></h2>
     </div>
   </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"><%= t "admin.departments.index.name_staff" %></th>
+        <th scope="col"><%= t "admin.departments.index.description_staff" %></th>
+        <th scope="col"><%= t "admin.departments.index.quantity_staff" %></th>
+        <th scope="col"><%= t "admin.departments.index.action_staff" %></th>
+      </tr>
+    </thead>
+    <tbody class="tbody">
+      <%= render @departments %>
+    </tbody>
+  </table>
 </div>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  <%= t("admin.departments.index.title") %>
+</button>
+<%= render "form" %>
+<div id="product-modal" class="modal fade"></div>

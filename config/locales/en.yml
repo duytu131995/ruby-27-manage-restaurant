@@ -1,4 +1,6 @@
 en:
+  find_department:
+    danger: "Does not exist department"
   header:
     home: "Home"
     menu: "Menu"
@@ -29,6 +31,7 @@ en:
       sign_up: "Signup for our newsletters"
       sign_up_submit: "Send Message"
   admin:
+    error: "error"
     login: "Login"
     email: "Email"
     password: "Password"
@@ -41,3 +44,31 @@ en:
     core: "Core"
     logged_in_as: "Logged in as:"
     department: "Departments"
+    departments:
+      index:
+        title_text: "Departments"
+        title: "New"
+        description: "Description"
+        name_staff: "Name"
+        description_staff: "Description"
+        quantity_staff: "Quantity"
+        action_staff: "Action"
+      new:
+        button: "Submit"
+        name: "Name"
+      create:
+        success: "New creation successfully!"
+        danger: "New creation failed!"
+      edit:
+        button: "Update"
+      update:
+        success: "Update successfully!"
+        danger: "Update failed!"
+      destroy:
+        success: "Delete successfully!"
+        danger: "Delete failed!"
+      department:
+        edit: "Edit"
+        delete: "Delete"
+        staff: "Staff"
+        confirm: "Are you sure?"

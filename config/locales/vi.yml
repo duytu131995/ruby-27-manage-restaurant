@@ -1,4 +1,6 @@
 vi:
+  find_department:
+    danger: "Bộ phận không tồn tại"
   header:
     home: "Trang chủ"
     menu: "Thực đơn"
@@ -29,6 +31,7 @@ vi:
       sign_up: "Đăng kí nhận thông tin tại đây"
       sign_up_submit: "Gửi ngay"
   admin:
+    error: "lỗi"
     login: "Đăng nhập"
     email: "Email"
     password: "Mật khẩu"
@@ -41,3 +44,32 @@ vi:
     core: "Chính"
     logged_in_as: "Đăng nhập bởi:"
     department: "Bộ phận nhân viên"
+    departments:
+      index:
+        title_text: "Bộ phận nhân viên"
+        title: "Thêm mới"
+        description: "Chi tiết"
+        name_staff: "Tên bộ phận nhân viên"
+        description_staff: "Mô tả chi tiết"
+        quantity_staff: "Số lượng"
+        action_staff: "Hoạt động"
+      new:
+        button: "Gửi"
+        name: "Tên chức vụ"
+        description: "Mô tả chi tiết"
+      create:
+        success: "Thêm mới thành công!"
+        danger: "Thêm mới thất bại!"
+      edit:
+        button: "Cập nhật"
+      update:
+        success: "Cập nhật thành công!"
+        danger: "Cập nhật thất bại!"
+      destroy:
+        success: "Xóa thành công!"
+        danger: "Xóa thất bại!"
+      department:
+        edit: "Sửa"
+        delete: "Xóa"
+        staff: "Nhân viên"
+        confirm: "Bạn có chắc chắn muốn xóa?"
