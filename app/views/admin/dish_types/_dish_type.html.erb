@@ -1,0 +1,17 @@
+<tr>
+  <th scope="row"><%= dish_type_counter + 1 %></th>
+  <td><%= dish_type.name %></td>
+  <td><%= dish_type.description %></td>
+  <td><%= dish_type.created_at.strftime(Settings.dish_types.format_date) %></td>
+  <td><%= dish_type.updated_at.strftime(Settings.dish_types.format_date) %></td>
+  <td>
+    <div class="btn-group">
+      <%= link_to edit_admin_dish_type_path(dish_type), class: "btn btn-warning", title: t("dish_types.edit") do %>
+        <i class="fa fa-edit"></i>
+      <% end %>
+      <%= button_to [:admin, dish_type], method: :delete, title: t("dish_types.delete"), class: "btn btn-danger btn-sm" do %>
+        <i class="fas fa-trash-alt"></i>
+      <% end %>
+    </div>
+  </td>
+</tr>

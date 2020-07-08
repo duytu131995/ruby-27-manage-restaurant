@@ -11,6 +11,10 @@
           <div class="sb-nav-link-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
           <%= t "admin.department" %>
         <% end %>
+        <%= link_to admin_dish_types_path, class: "nav-link" do %>
+          <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+          <%= t "dish_types.category" %>
+        <% end %>
       </div>
     </div>
     <div class="sb-sidenav-footer">

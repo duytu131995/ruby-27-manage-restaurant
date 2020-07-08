@@ -1,0 +1,18 @@
+<div class="list">
+  <%= link_to t("dish_types.add"), new_admin_dish_type_path, class: "btn btn-primary" %>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col"><%= t "dish_types.name" %></th>
+      <th scope="col"><%= t "dish_types.description" %></th>
+      <th scope="col"><%= t "dish_types.created_up" %></th>
+      <th scope="col"><%= t "dish_types.updated_up" %></th>
+      <th scope="col"><%= t "dish_types.action" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @dish_types %>
+  </tbody>
+</table>

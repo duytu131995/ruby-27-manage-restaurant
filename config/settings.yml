@@ -6,3 +6,5 @@ department:
       max: 30
     description:
       max: 5000
+dish_types:
+  format_date: "%d/%m/%Y"
