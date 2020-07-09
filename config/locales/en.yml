@@ -1,4 +1,6 @@
 en:
+  find_department:
+    danger: "Does not exist department"
   header:
     home: "Home"
     menu: "Menu"
@@ -43,14 +45,36 @@ en:
     logged_in_as: "Logged in as:"
     department: "Departments"
     departments:
-      index: "New"
+      index:
+        title_text: "Departments"
+        title: "New"
+        description: "Description"
+        name_staff: "Name"
+        description_staff: "Description"
+        quantity_staff: "Quantity"
+        action_staff: "Action"
       new:
         button: "Submit"
         name: "Name"
-        description: "Description"
       create:
         success: "New creation successfully!"
         danger: "New creation failed!"
+      update:
+        success: "Update successfully!"
+        danger: "Update failed!"
+      delete:
+        success: "Delete successfully!"
+        confirm: "Are you sure?"
+      department:
+        staff: "Staff"
+        new:
+          title: "Create new"
+          button_text: "Create new"
+        edit:
+          title: "Edit"
+          button_text: "Edit"
+        delete: "Delete"
+        submit: "Submit"
   dish_types:
     create_success: "Create success"
     create_error: "Create error"
@@ -68,4 +92,18 @@ en:
     created_up: "Created up"
     updated_up: "Updated up"
     action: "Action"
-    category: "Category"
+    category_title: "Category"
+    category:
+      edit:
+        button: "Update"
+      update:
+        success: "Update successfully!"
+        danger: "Update failed!"
+      destroy:
+        success: "Delete successfully!"
+        danger: "Delete failed!"
+      department:
+        edit: "Edit"
+        delete: "Delete"
+        staff: "Staff"
+        confirm: "Are you sure?"

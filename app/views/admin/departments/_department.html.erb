@@ -1,4 +1,10 @@
-<li class="list-group-item d-flex justify-content-between align-items-center">
-  <%= department.name %>
-  <span class="badge badge-primary badge-pill"><%= department.users.size %></span>
-</li>
+<tr class="row-list-department">
+  <th scope="row"><%= department_counter + 1 %></th>
+  <td class="name"><%= department.name %></td>
+  <td class="description"><%= department.description %></td>
+  <td class="size"><%= department.users.size %> <%= t "admin.departments.department.staff" %></td>
+  <td class="status">
+    <%= link_to t("admin.departments.department.edit.title"), edit_admin_department_path(department), remote: true, class: "btn btn-warning" %>
+    <%= link_to t("admin.departments.department.delete"), [:admin, department], method: :delete, class: "btn btn-danger destroy", data: {id: department.id} %>
+  </td>
+</tr>

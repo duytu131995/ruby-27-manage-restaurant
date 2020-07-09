@@ -1,6 +1,27 @@
 <div class="list_departments">
-  <%= link_to t("admin.departments.index"), new_admin_department_path, class: "btn btn-primary", role: :button %>
-  <ul class="list-group">
-    <%= render @departments %>
-  </ul>
+  <div class="notification"></div>
+  <div class="top-title">
+    <div class="title">
+      <h2><%= t "admin.departments.index.title_text" %></h2>
+    </div>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col"><%= t "admin.departments.index.name_staff" %></th>
+        <th scope="col"><%= t "admin.departments.index.description_staff" %></th>
+        <th scope="col"><%= t "admin.departments.index.quantity_staff" %></th>
+        <th scope="col"><%= t "admin.departments.index.action_staff" %></th>
+      </tr>
+    </thead>
+    <tbody class="tbody">
+      <%= render @departments %>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to t("admin.departments.department.new.title"), new_admin_department_path, remote: true, class: "btn btn-primary" %>
+
+<div class="modal" id="myModal">
 </div>

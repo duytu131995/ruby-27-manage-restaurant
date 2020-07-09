@@ -7,6 +7,7 @@ gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap-sass", "~> 3.3.1"
 gem "config"
 gem "faker", "~> 2.12"
+gem "i18n-js"
 gem "jbuilder", "~> 2.7"
 gem "jquery-rails"
 gem "mysql2", ">= 0.4.4"

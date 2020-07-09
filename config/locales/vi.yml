@@ -1,4 +1,6 @@
 vi:
+  find_department:
+    danger: "Bộ phận không tồn tại"
   header:
     home: "Trang chủ"
     menu: "Thực đơn"
@@ -43,7 +45,14 @@ vi:
     logged_in_as: "Đăng nhập bởi:"
     department: "Bộ phận nhân viên"
     departments:
-      index: "Thêm mới"
+      index:
+        title_text: "Bộ phận nhân viên"
+        title: "Thêm mới"
+        description: "Chi tiết"
+        name_staff: "Tên bộ phận nhân viên"
+        description_staff: "Mô tả chi tiết"
+        quantity_staff: "Số lượng"
+        action_staff: "Hoạt động"
       new:
         button: "Gửi"
         name: "Tên chức vụ"
@@ -51,6 +60,22 @@ vi:
       create:
         success: "Thêm mới thành công!"
         danger: "Thêm mới thất bại!"
+      update:
+        success: "Cập nhật thành công!"
+        danger: "Cập nhật thất bại!"
+      delete:
+        success: "Xóa thành công!"
+        confirm: "Bạn có chắc chắn mốn xóa?"
+      department:
+        staff: "Nhân viên"
+        new:
+          title: "Thêm mới"
+          button_text: "Thêm nhân viên mới"
+        edit:
+          title: "Sửa"
+          button_text: "Sửa thông tin nhân viên"
+        delete: "Xóa"
+        submit: "Lưu"
   dish_types:
     create_success: "Thêm danh mục thành công"
     create_error: "Thêm danh mục thất bại"
@@ -68,4 +93,18 @@ vi:
     created_up: "Thời gian tạo"
     updated_up: "Thời gian cập nhật"
     action: "Hành động"
-    category: "Danh mục sản phẩm"
+    category_title: "Danh mục sản phẩm"
+    category:
+      edit:
+        button: "Cập nhật"
+      update:
+        success: "Cập nhật thành công!"
+        danger: "Cập nhật thất bại!"
+      destroy:
+        success: "Xóa thành công!"
+        danger: "Xóa thất bại!"
+      department:
+        edit: "Sửa"
+        delete: "Xóa"
+        staff: "Nhân viên"
+        confirm: "Bạn có chắc chắn muốn xóa?"

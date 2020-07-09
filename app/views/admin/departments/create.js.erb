@@ -4,9 +4,9 @@ $(".notification").html("")
   <% @department.errors.full_messages.each do |message| %>
     $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
   <% end %>
-  $(".notification").append('<div class="alert alert-danger"><%= t "admin.departments.update.danger" %></div>')
+  $(".notification").append('<div class="alert alert-success"><%= t "admin.departments.create.danger" %></div>')
 <% else %>
   $(".tbody").html("<%= escape_javascript(render @departments) %>")
   $("#myModal").modal("hide")
-  $(".notification").append('<div class="alert alert-success"><%= t "admin.departments.update.success" %></div>')
+  $(".notification").append('<div class="alert alert-success"><%= t "admin.departments.create.success" %></div>')
 <% end %>

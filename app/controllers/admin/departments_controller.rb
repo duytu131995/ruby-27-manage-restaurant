@@ -1,7 +1,8 @@
 class Admin::DepartmentsController < AdminController
-  def index
-    @departments = Department.all
-  end
+  before_action :find_department, only: %i(edit update destroy)
+  before_action :get_departments, only: %i(update create index)
+
+  def index; end
 
   def show; end
 
@@ -10,19 +11,34 @@ class Admin::DepartmentsController < AdminController
   end
 
   def create
-    @department = Department.new department_params
-    if @department.save
-      flash[:success] = t "admin.departments.create.success"
-      redirect_to admin_department_path @department
-    else
-      flash[:danger] = t "admin.departments.create.danger"
-      render :new
-    end
+    @department = Department.create department_params
+  end
+
+  def edit; end
+
+  def update
+    @department.update_attributes department_params
+  end
+
+  def destroy
+    @department.destroy
   end
 
   private
 
+  def get_departments
+    @departments = Department.all
+  end
+
   def department_params
     params.require(:department).permit Department::DEPARTMENT_PARAMS
+  end
+
+  def find_department
+    @department = Department.find_by id:params[:id]
+    return if @department
+
+    flash[:danger] = t "find_department.danger"
+    redirect_to admin_departments_path @department
   end
 end

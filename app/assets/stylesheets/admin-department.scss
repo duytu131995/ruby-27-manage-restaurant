@@ -1,4 +1,4 @@
-#admin-contents {
+#admin-contents{
   padding: 30px;
 }
 
@@ -6,3 +6,28 @@
   margin-top: 30px;
 }
 
+.list_departments .row-list-department td.name{
+  min-width: 200px;
+}
+
+.list_departments .row-list-department td.size{
+  min-width: 150px;
+}
+
+.list_departments .row-list-department td.status{
+  min-width: 140px;
+}
+
+.list_departments .row-list-department td.status form{
+  display: inline-block;
+}
+
+.list_departments .row-list-department td.status form input,
+.list_departments .row-list-department td.status a{
+  padding: 2px 10px;
+  font-size: 13px;
+}
+
+.list_departments table{
+  margin-top: 30px;
+}
