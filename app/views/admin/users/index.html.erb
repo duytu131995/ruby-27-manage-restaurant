@@ -1,10 +1,11 @@
 <div class="list_users">
   <div class="notification"></div>
-  <div class="top-title">
-    <div class="title">
+  <div class="top-title clearfix">
+    <div class="title float-left">
       <h2><%= t ".title" %></h2>
+      <%= collection_select :user, :department_id, @departmentz, :id, :name, {}, class: "form-control" %>
     </div>
-    <div class="create">
+    <div class="create float-right">
       <%= link_to t(".create_new"), new_admin_user_path, "data-toggle": "modal", "data-target": "#myModal-form-user", remote: true, class: "btn btn-primary" %>
     </div>
   </div>
@@ -17,11 +18,13 @@
         <th scope="col"><%= t ".status" %></th>
       </tr>
     </thead>
-    <tbody class="tbody" id="department-tbody">
+    <tbody class="tbody tbody-user" id="department-tbody">
       <%= render @users %>
     </tbody>
   </table>
-  <%= paginate @users, theme: "twitter-bootstrap-3" %>
+  <div class="center">
+    <%= paginate @users, theme: "twitter-bootstrap-3" %>
+  </div>
 </div>
 <div class="modal" id="myModal-form-user">
 </div>

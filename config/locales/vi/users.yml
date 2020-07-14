@@ -52,17 +52,31 @@ vi:
       show:
         details_user: "Thông tin chi tiết nhân viên"
         name: "Họ và Tên"
-        email: "Địa chỉ email"
+        email: "Email"
         address: "Địa chỉ"
         phone: "Số điện thoại"
         birthday: "Ngày sinh"
         department: "Bộ phận"
-        activated: "Kích hoạt"
+        activated: "Trạng thái"
         gender: "Giới tính"
-        close: "Hủy"
+        close: "Đóng"
+        man: "Nam"
+        women: "Nữ"
+        active: "Đã kích hoạt"
+        unactive: "Chưa kích hoạt"
       user:
         show: "Xem"
         edit: "Sửa"
         delete: "Xóa"
       find_user:
         danger: "Không tồn tại"
+      update:
+        success: "Cập nhật thành công"
+        danger: "Cập nhật thất bại"
+    session:
+      new:
+        login: "Đăng nhập"
+      form:
+        email: "Địa chỉ email"
+        password: "Mật khẩu"
+        submit: "Đăng nhập"

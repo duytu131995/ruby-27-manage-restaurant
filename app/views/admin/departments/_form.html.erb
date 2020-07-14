@@ -6,14 +6,15 @@
     </div>
     <div class="modal-body">
       <%= form_for [:admin, @department], remote: true do |f| %>
-        <ul class="errors"></ul>
         <div class="form-group">
           <%= f.label :name, t("admin.departments.new.name") %>
           <%= f.text_field :name, class: "form-control" %>
+          <p class="error-name reset-error"></p>
         </div>
         <div class="form-group">
           <%= f.label :description, t("admin.departments.new.description") %>
           <%= f.text_area :description, class: "form-control", rows: Settings.form.text_area_rows %>
+          <p class="error-description reset-error"></p>
         </div>
 
         <div class="modal-footer">

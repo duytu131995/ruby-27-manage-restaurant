@@ -1,0 +1,22 @@
+$('.notification').html('')
+<% if @user.errors.any? %>
+  $('#myModal-form-user').find('.reset-error').html('')
+  $('#myModal-form-user').find('.form-control').css("border-color", "#ced4da");
+  <% @user.errors.messages.each  do |key, value| %>
+    $('#myModal-form-user').find('.error-<%= key %>').html('<%= "#{t("errors.user.#{key}")} #{value.join(", ")}" %>')
+    $('#myModal-form-user').find('#user_<%= key %>').css("border-color", "#e68383");
+  <% end %>
+  $('.notification').append('<div class="alert alert-danger"><%= t ".danger" %></div>')
+<% else %>
+  $('.row-user-<%= @user.id %>').find('.name').html('<%= @user.name %>')
+  $('.row-user-<%= @user.id %>').find('.department').html('<%= @user.department.name %>')
+  $('#myModal-show-user-<%= @user.id %>').find('.name').html('<%= @user.name %>')
+  $('#myModal-show-user-<%= @user.id %>').find('.email').html('<%= @user.email %>')
+  $('#myModal-show-user-<%= @user.id %>').find('.address').html('<%= @user.address %>')
+  $('#myModal-show-user-<%= @user.id %>').find('.phone').html('<%= @user.phone %>')
+  $('#myModal-show-user-<%= @user.id %>').find('.gender').html('<%= @user.gender %>')
+  $('#myModal-show-user-<%= @user.id %>').find('.birthday').html('<%= @user.birthday %>')
+  $('#myModal-show-user-<%= @user.id %>').find('.department').html('<%= @user.department.name %>')
+  $('#myModal-form-user').modal('hide')
+  $('.notification').append('<div class="alert alert-success"><%= t ".success" %></div>')
+<% end %>

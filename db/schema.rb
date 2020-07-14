@@ -162,7 +162,6 @@ ActiveRecord::Schema.define(version: 2020_07_16_084105) do
     t.date "birthday"
     t.string "phone"
     t.integer "gender", default: 0, null: false
-    t.string "remember_digest"
     t.integer "activated", default: 0, null: false
     t.index ["department_id"], name: "index_users_on_department_id"
   end

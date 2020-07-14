@@ -4,15 +4,17 @@ class User < ApplicationRecord
 
   delegate :name, to: :department, prefix: :department
 
-  enum role: {admin: 0, user: 1, customer: 2}, gender: {man: 0, women: 1}
+  enum role: {admin: 0, user: 1, customer: 2}, gender: {man: 0, women: 1}, activated: {unactive: 0, active: 1}
 
   VALID_EMAIL_REGEX = Settings.email_regex
+
   PERMIT_ATTRIBUTES = %i(name email password password_confirmation address
                           birthday phone gender).freeze
-  USER_PARAMS = %i(name email address phone birthday department_id activated
-                   gender password password_confirmation).freeze
-  CUSTOMER_UPDATE_PARAMS = %i(name address phone birthday gender
-                           password password_confirmation).freeze
+
+  CUSTOMER_UPDATE_PARAMS = %i(name address phone birthday
+                              gender password password_confirmation).freeze
+  USER_PARAMS = %i(name email address phone birthday role activated
+                   department_id gender password password_confirmation).freeze
 
   attr_accessor :activation_token
 

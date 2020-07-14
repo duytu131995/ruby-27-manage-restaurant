@@ -1,8 +1,10 @@
-$('ul.errors').html('')
 $('.notification').html('')
 <% if @department.errors.any? %>
-  <% @department.errors.full_messages.each do |message| %>
-    $('ul.errors').append($('<li />').html('<%= message.html_safe %>'))
+  $('#myModal').find('.reset-error').html('')
+  $('#myModal').find('.form-control').css("border-color", "#ced4da");
+  <% @department.errors.messages.each  do |key, value| %>
+    $('#myModal').find('.error-<%= key %>').html('<%= "#{t("errors.user.#{key}")} #{value.join(", ")}" %>')
+    $('#myModal').find('#department_<%= key %>').css("border-color", "#e68383");
   <% end %>
   $('.notification').append('<div class="alert alert-danger"><%= t ".danger" %></div>')
 <% else %>

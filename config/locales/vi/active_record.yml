@@ -10,3 +10,4 @@ vi:
       women: "Nữ"
       password: "Mật khẩu"
       password_confirmation: "Xác nhận mật khẩu"
+      description: "Mô tả chi tiết"

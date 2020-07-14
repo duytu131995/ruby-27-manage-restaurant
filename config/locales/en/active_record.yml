@@ -10,3 +10,4 @@ en:
       women: "Women"
       password: "Password"
       password_confirmation: "Confirm password"
+      description: "Description"

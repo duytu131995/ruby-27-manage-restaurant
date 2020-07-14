@@ -5,26 +5,8 @@
 end
 
 departments = Department.order(:created_at).take(4)
-15.times do
+15.times do |n|
   name = Faker::Name.name
-  departments.each { |department| department.users.create! name: name }
-3.times do |n|
-  name = Faker::Name.name
-  Department.create!(name: name,
-              description: "user description")
-end
-99.times do |n|
-  name = Faker::Name.name
-  email = "user-#{n+1}@gmail.com"
-  User.create!(name: name,
-              email: email,
-              password: "123456",
-              password_confirmation: "123456",
-              address: "HN",
-              department_id: 1,
-              role: "user",
-              birthday: "2000",
-              phone: "8888",
-              gender: "man",
-              activated: true)
+  email = "duytu#{n+1}@gmail.org"
+  departments.each { |department| department.users.create! name: name, email: email, password: "12345678", password_confirmation: "12345678", address: "Ha Noi", birthday: Time.zone.now, phone: "0987654321", gender: "man"}
 end

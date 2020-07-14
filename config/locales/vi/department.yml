@@ -28,9 +28,9 @@ vi:
         staff: "Nhân viên"
         new:
           title: "Thêm mới"
-          button_text: "Thêm nhân viên mới"
+          button_text: "Thêm phòng ban"
         edit:
           title: "Sửa"
-          button_text: "Sửa thông tin nhân viên"
+          button_text: "Sửa thông tin phòng ban"
         delete: "Xóa"
         submit: "Lưu"

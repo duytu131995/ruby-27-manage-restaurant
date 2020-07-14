@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     namespace :admin do
       root "admin#index"
       get "/login", to: "session#new"
+      post "/login", to: "session#create"
+      delete "/logout", to: "session#destroy"
       resources :admin_customers
       resources :departments
       resources :dish_types
