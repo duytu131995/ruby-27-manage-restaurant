@@ -23,4 +23,8 @@ module SessionHelper
     session.delete :user_id
     cookies.delete :user_id
   end
+
+  def status_dinner_tabel val
+    val.free? ? t("dinner_tables.free") : t("dinner_tables.using")
+  end
 end

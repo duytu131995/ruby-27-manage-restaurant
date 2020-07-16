@@ -1,0 +1,17 @@
+vi:
+  reviews:
+    form:
+      content: "Nội dung"
+      submit: "Thêm đánh giá"
+      review: "Đánh giá"
+    new:
+      back: "Quay lại"
+      title: "Viết đánh giá món ăn"
+    edit:
+      back: "Quay lại"
+      title: "Viết đánh giá món ăn"
+    create:
+      success: "Tạo đánh giá thành công"
+      danger: "Tạo đánh giá thất bại"
+  login_errors:
+    info: "Bạn chưa đăng nhập"

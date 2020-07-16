@@ -1,0 +1,13 @@
+$('.notification').html('')
+$('.notification').show()
+<% if current_user %>
+  <% if @order.errors.any? || @order_item.errors.any? %>
+    $('.notification').append('<div class="alert alert-danger"><%= t "dinner_tables.orders.danger" %></div>')
+  <% else %>
+    $('.cart-text').html('<%= j render "layouts/cart_text" %>')
+    $('.notification').append('<div class="alert alert-success"><%= t "dinner_tables.orders.success" %></div>')
+  <% end %>
+  setTimeout(function(){ $('.notification').hide("slow") }, 2000);
+<% else %>
+  alert('<%= t "dinner_tables.errors.nologin" %>')
+<% end %>

@@ -1,0 +1,61 @@
+vi:
+  dinner_tables:
+    free: "Trống"
+    using: "Đang ăn"
+    name_table: "Bàn"
+    index:
+      list: "Danh sách bàn ăn"
+      status: "Trạng thái"
+      chair: "Số ghế"
+    show:
+      title: "Danh sách món ăn"
+      price: "Giá"
+      submit: "Thêm vào thực đơn"
+      order: "Thực đơn"
+      dish: "món ăn"
+      search:
+        title: "Tìm kiếm món ăn"
+        submit: "Tìm kiếm"
+      search_nil: "Món ăn hiện tại không có trong thực đơn"
+    member:
+      action: "Người phụ trách"
+    errors:
+      nologin: "Bạn chưa đăng nhập!"
+    orders:
+      success: "Thêm món thành công!"
+      danger: "Thêm món thất bại!"
+    destroy:
+      success: "Đã kết thúc phiên làm việc của bàn"
+      danger: "Kết thúc phiên làm việc thất bại!"
+  carts:
+    index:
+      continue: "Tiếp tục gọi món"
+      finish: "Hoàn tất"
+      out_table: "Bạn muốn kết thúc phiên làm việc của bàn ăn?"
+      dish: "Số món ăn"
+      name: "Tên"
+      status: "Trạng thái"
+      price: "Giá"
+      quantity: "Số lượng"
+      action: "Hành động"
+      subtotal: "Thành tiền"
+      total: "Tổng tiền"
+      update: "Cập nhật"
+      delete: "Xóa"
+      confirm_delete: "Bạn có chắc chắn muốn xóa?"
+      inorders: "Chi tiết hóa đơn"
+    update:
+      success: "Cập nhật thành công!"
+      danger: "Cập nhật thất bại!"
+    delete:
+      success: "Xóa thành công!"
+      danger: "Xóa thất bại!"
+    zero:
+      text: "Không có món ăn nào trong thực đơn. Làm ơn %{link1} và thêm món ăn vào thực đơn. Hoặc %{link2} đề kết thúc phiên đặt món."
+      link1: "quay trở lại"
+      link2: "hoàn tất"
+  order_items:
+    index:
+      success: "Hoàn thành"
+      pending: "Đang chế biến"
+      back: "Quay lại"

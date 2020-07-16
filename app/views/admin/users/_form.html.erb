@@ -6,24 +6,48 @@
     </div>
     <div class="modal-body">
       <%= form_for [:admin, @user], remote: true do |f| %>
-        <ul class="errors"></ul>
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
+              <%= f.label :department_id, t(".department") %>
+              <%= collection_select :user, :department_id, @departmentz, :id, :name, {}, class: "form-control" %>
+            </div>
+            <div class="form-group">
               <%= f.label :name, t(".name") %>
               <%= f.text_field :name, class: "form-control" %>
+              <p class="error-name reset-error"></p>
             </div>
+            <div class="form-group">
+              <%= f.label :email, t(".email") %>
+              <%= f.text_field :email, class: "form-control" %>
+              <p class="error-email reset-error"></p>
+            </div>
+            <div class="form-group">
+              <%= f.label :password, t(".password") %>
+              <%= f.password_field :password, class: "form-control" %>
+              <p class="error-password reset-error"></p>
+            </div>
+            <div class="form-group">
+              <%= f.label :password_confirmation, t(".password_confirmation") %>
+              <%= f.password_field :password_confirmation, class: "form-control" %>
+              <p class="error-password_confirmation reset-error"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
             <div class="form-group">
               <%= f.label :address, t(".address") %>
               <%= f.text_field :address, class: "form-control" %>
+              <p class="error-address reset-error"></p>
             </div>
             <div class="form-group">
               <%= f.label :phone, t(".phone") %>
               <%= f.text_field :phone, class: "form-control" %>
+              <p class="error-phone reset-error"></p>
             </div>
             <div class="form-group">
               <%= f.label :birthday, t(".birthday") %>
               <%= f.datetime_local_field :birthday, class: "form-control" %>
+              <p class="error-birthday reset-error"></p>
             </div>
             <div class="form-group">
               <%= f.label :gender, t(".gender") %>
@@ -38,28 +62,8 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <%= f.label :email, t(".email") %>
-              <%= f.text_field :email, class: "form-control" %>
-            </div>
-            <div class="form-group">
-              <%= f.label :department_id, t(".department") %>
-              <%= collection_select :user, :department_id, @department, :id, :name, {}, class: "form-control" %>
-            </div>
-            <div class="form-group">
-              <%= f.label :activated, t(".activated") %>
-              <%= f.text_field :activated, class: "form-control" %>
-            </div>
-            <div class="form-group">
-              <%= f.label :password, t(".pasword") %>
-              <%= f.password_field :password, class: "form-control" %>
-            </div>
-            <div class="form-group">
-              <%= f.label :password_confirmation, t(".password_confirmation") %>
-              <%= f.password_field :password_confirmation, class: "form-control" %>
-            </div>
+            <%= f.hidden_field :activated, value: "unactive" %>
+            <%= f.hidden_field :role, value: "user" %>
           </div>
         </div>
         <div class="modal-footer">

@@ -1,15 +1,18 @@
 class Admin::UsersController < AdminController
-  before_action :find_user, only: :show
+  before_action :find_user, only: %i(edit update destroy)
+
+  include SessionHelper;
 
   def index
     @users = User.includes(:department).page(params[:page]).per Settings.users.per
+    @departmentz = Department.all
   end
 
   def show; end
 
   def new
     @user = User.new
-    @department = Department.all
+    @departmentz = Department.all
   end
 
   def create
@@ -17,11 +20,18 @@ class Admin::UsersController < AdminController
     respond_to :js
   end
 
-  def edit; end
+  def edit
+    @departmentz = Department.all
+  end
 
-  def update; end
+  def update
+    @user.update params_user
+    respond_to :js
+  end
 
-  def destroy; end
+  def destroy
+    @user.destroy
+  end
 
   private
 

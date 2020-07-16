@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_16_084105) do
+ActiveRecord::Schema.define(version: 2020_07_20_143546) do
 
   create_table "book_tables", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.datetime "start_time"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2020_07_16_084105) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "dish_type_id", null: false
     t.integer "status", default: 0, null: false
+    t.string "rating"
     t.index ["dish_type_id"], name: "index_dishes_on_dish_type_id"
   end
 
@@ -95,18 +96,22 @@ ActiveRecord::Schema.define(version: 2020_07_16_084105) do
     t.bigint "dish_id", null: false
     t.integer "status", default: 0, null: false
     t.integer "quantity"
+    t.decimal "unit_price", precision: 65
+    t.decimal "total", precision: 65
     t.index ["dish_id"], name: "index_order_items_on_dish_id"
     t.index ["order_id"], name: "index_order_items_on_order_id"
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "table_number"
-    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.decimal "price", precision: 3
     t.integer "payment_method", default: 0, null: false
+    t.decimal "total", precision: 65
+    t.decimal "subtotal", precision: 65
+    t.bigint "dinner_table_id", null: false
+    t.index ["dinner_table_id"], name: "index_orders_on_dinner_table_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
@@ -136,6 +141,7 @@ ActiveRecord::Schema.define(version: 2020_07_16_084105) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.bigint "dish_id", null: false
+    t.integer "rating"
     t.index ["dish_id"], name: "index_reviews_on_dish_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
@@ -162,7 +168,6 @@ ActiveRecord::Schema.define(version: 2020_07_16_084105) do
     t.date "birthday"
     t.string "phone"
     t.integer "gender", default: 0, null: false
-    t.string "remember_digest"
     t.integer "activated", default: 0, null: false
     t.index ["department_id"], name: "index_users_on_department_id"
   end
@@ -181,6 +186,7 @@ ActiveRecord::Schema.define(version: 2020_07_16_084105) do
   add_foreign_key "input_slips", "users"
   add_foreign_key "order_items", "dishes"
   add_foreign_key "order_items", "orders"
+  add_foreign_key "orders", "dinner_tables"
   add_foreign_key "orders", "users"
   add_foreign_key "promotional_foods", "dishes"
   add_foreign_key "promotional_foods", "promotions"

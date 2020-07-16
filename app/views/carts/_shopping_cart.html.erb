@@ -1,0 +1,68 @@
+<% if @order_items.size == 0 %>
+  <br>
+  <p class="text-center">
+    <%= sanitize t("carts.zero.text",
+          link1: link_to(t("carts.zero.link1"), dinner_table_path(session[:params_id])),
+          link2: link_to(t("carts.zero.link2"), finish_path, method: :delete)) %>
+  </p>
+<% else %>
+  <br>
+  <div class="back">
+    <%= link_to t("carts.index.continue"), dinner_table_path(session[:params_id]), class: "btn btn-sm btn-primary" %>
+  </div>
+  <div class="table-cart clearfix">
+    <div class="col-md-9 contents clearfix">
+      <div class="row">
+        <div class="col-md-2">
+          <h5 class="text-center"><%= t "carts.index.name" %></h5>
+        </div>
+        <div class="col-md-10">
+          <div class="row">
+            <div class="col-md-3">
+              <h5 class="text-center"><%= t "carts.index.price" %></h5>
+            </div>
+            <div class="col-md-1">
+              <div class="row">
+                <h5 class="text-center"><%= t "carts.index.quantity" %></h5>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <h5 class="text-center"><%= t "carts.index.action" %></h5>
+            </div>
+            <div class="col-md-2">
+              <div class="row">
+                <h5 class="text-center"><%= t "carts.index.status" %></h5>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <h5 class="text-center"><%= t "carts.index.subtotal" %></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <% @order_items.each do |order_item| %>
+        <%= render 'carts/cart_row', dish: order_item.dish, order_item: order_item, show_total: true %>
+      <% end %>
+    </div>
+    <div class="col-md-3 totals">
+      <div class="contens-price clearfix">
+        <div class="price-text"><span><%= t "carts.index.dish" %>:</span></div>
+        <div class="price-number"><h4 class="text-danger"><%= @order_items.size %></h4></div>
+      </div>
+      <div class="contens-price clearfix">
+        <div class="price-text"><span><%= t "carts.index.total" %>:</span></div>
+        <div class="price-number"><h4 class="text-danger"><%= number_to_currency @total %></h4></div>
+      </div>
+      <div class="view-action-orders finish-orders">
+        <%= link_to t("carts.index.inorders"), order_items_path %>
+      </div>
+      <div class="finish-orders">
+        <%= link_to t("carts.index.finish"), finish_path, method: :delete, data: {confirm: t("carts.index.out_table")} %>
+      </div>
+    </div>
+  </div>
+<% end %>
+<div class="botton-cart clearfix">
+<br><br><br>
+</div>

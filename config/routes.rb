@@ -15,8 +15,14 @@ Rails.application.routes.draw do
     get "/login", to: "session#new"
     post "/login", to: "session#create"
     delete "/logout", to: "session#destroy"
+    delete "/finish", to: "dinner_tables#destroy"
     resources :users
-    resources :dishes, only: :index
+    resources :dishes do
+      resources :reviews, except: [:show, :index]
+    end
     resources :book_tables
+    resources :dinner_tables
+    resource :cart, only: [:show]
+    resources :order_items, only: [:index, :create, :update, :destroy]
   end
 end

@@ -7,21 +7,21 @@
     <div class="modal-body">
       <div class="row">
         <div class="col-md-6">
-          <p><span><%= t ".name" %>: </span><%= user.name %></p>
-          <p><span><%= t ".email" %>: </span><%= user.email %></p>
-          <p><span><%= t ".address" %>: </span><%= user.address %></p>
-          <p><span><%= t ".phone" %>: </span><%= user.phone %></p>
+          <p><%= t ".name" %>: <span class="name"><%= user.name %></span></p>
+          <p><%= t ".email" %>: <span class="email"><%= user.email %></span></p>
+          <p><%= t ".address" %>: <span class="address"><%= user.address %></span></p>
+          <p><%= t ".phone" %>: <span class="phone"><%= user.phone %></span></p>
         </div>
         <div class="col-md-6">
-          <p><span><%= t ".gender" %>: </span><%= user.gender %></p>
-          <p><span><%= t ".birthday" %>: </span><%= user.birthday %></p>
-          <p><span><%= t ".department" %>: </span><%= user.department_name %></p>
-          <p><span><%= t ".activated" %>: </span><%= user.activated %></p>
+          <p><%= t ".department" %>: <span class="department"><%= user.department_name %></span></p>
+          <p><%= t ".gender" %>: <span class="gender"><%= gender user.gender %></span></p>
+          <p><%= t ".birthday" %>: <span class="birthday"><%= user.birthday %></span></p>
+          <p><%= t ".activated" %>: <span class=""><%= active user.activated %></span></p>
         </div>
       </div>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-danger" data-dismiss="modal"><%= t ".close" %></button>
+      <button type="button" class="btn btn-primary" data-dismiss="modal"><%= t ".close" %></button>
     </div>
   </div>
 </div>

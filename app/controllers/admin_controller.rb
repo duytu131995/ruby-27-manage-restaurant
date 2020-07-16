@@ -1,6 +1,8 @@
 class AdminController < ActionController::Base
   before_action :set_locale
 
+  include SessionHelper;
+
   private
 
   def set_locale

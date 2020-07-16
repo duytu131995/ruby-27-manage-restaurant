@@ -1,0 +1,10 @@
+$('.notification').html('')
+$('.notification').show()
+<% if @order_item.errors.any? %>
+  $('.notification').append('<div class="alert alert-danger"><%= t "carts.update.danger" %></div>')
+<% else %>
+  $('.cart-text').html('<%= j render "layouts/cart_text" %>')
+  $('.shopping-cart').html('<%= j render "carts/shopping_cart" %>')
+  $('.notification').append('<div class="alert alert-success"><%= t "carts.update.success" %></div>')
+<% end %>
+setTimeout(function(){ $('.notification').hide('slow') }, 2000);

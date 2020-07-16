@@ -6,6 +6,7 @@ vi:
     blog: "Bài viết"
     login: "Đăng nhập"
     logout: "Đăng xuất"
+    dishes: "Danh sách món ăn"
   footer:
     copyright: "Bản quyền 2017 Victory Template"
     author: "Victory Template"

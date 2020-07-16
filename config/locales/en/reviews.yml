@@ -1,0 +1,17 @@
+en:
+  reviews:
+    form:
+      content: "Content"
+      submit: "Add reviews"
+      review: "Review"
+    new:
+      back: "Back"
+      title: "Write reviews"
+    edit:
+      back: "Back"
+      title: "Write reviews"
+    create:
+      success: "Created successfully!"
+      danger: "Created fail!"
+  login_errors:
+    info: "You are not logged in"

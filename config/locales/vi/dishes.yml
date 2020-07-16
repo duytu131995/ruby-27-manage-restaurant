@@ -7,6 +7,10 @@ vi:
     price: "Giá"
     image: "Hình ảnh"
     update_success: "Cập nhật thành công"
+    description: "Chi tiết"
+    show:
+      title: "Viết đánh giá"
+      noreview: "Chưa có đánh giá nào"
   image:
     image_type: "File bạn muốn tải lên không đúng định dạng!"
     add_a_image: "Thêm ảnh"

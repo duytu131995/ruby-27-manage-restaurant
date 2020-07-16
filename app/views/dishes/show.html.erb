@@ -1,0 +1,58 @@
+<div class="main-dish">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag @dish.images.first.image.url, alt: "#{@dish.name}" %>
+        <br>
+        <br>
+        <div class="start-review-dish">
+          <div class="star-rating" data-score= <%= @avg_review %> ></div>
+          <em><%= "#{@reviews.length} reviews " %></em>
+        </div>
+        <br>
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><strong><%= t "carts.index.name" %>:</strong></td>
+                <td><%= @dish.name %></td>
+              </tr>
+              <tr>
+                <td><strong><%= t "carts.index.price" %>:</strong></td>
+                <td><%= number_to_currency @dish.price %></td>
+              </tr>
+              <tr>
+                <td><strong><%= t "dishes.description" %>:</strong></td>
+                <td><%= @dish.description %></td>
+              </tr>
+            </tbody>
+          </table>
+          <%= link_to t(".title"), new_dish_review_path(@dish) %>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <h2 class="review-title"><%= @dish.name %></h2>
+        <p><%= @dish.description %></p>
+        <% if @reviews.blank? %>
+          <h3><%= t ".noreview" %></h3>
+          <%= link_to t(".title"), new_dish_review_path(@dish), class: "btn btn-danger" %>
+        <% else %>
+          <% @reviews.each do |review| %>
+            <div class="star-rating" data-score=<%= review.rating %> ></div>
+            <p><%= review.content %></p>
+            <hr>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $('.star-rating').raty({
+    path: '/assets/',
+    readOnly: true,
+    score: function(){
+      return $(this).attr('data-score')
+    }
+  })
+</script>

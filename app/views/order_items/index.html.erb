@@ -1,0 +1,24 @@
+<div class="container">
+  <br>
+  <span><%= link_to t("order_items.index.back"), cart_path, class: "btn btn-sm btn-primary" %></span>
+  <h2><%= t "carts.index.inorders" %></h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"><%= t "carts.index.name" %></th>
+        <th scope="col"><%= t "carts.index.price" %></th>
+        <th scope="col"><%= t "carts.index.quantity" %></th>
+        <th scope="col"><%= t "carts.index.subtotal" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @order_items.each do |order_item| %>
+        <%= render 'order_items/order_item', dish: order_item.dish, order_item: order_item, show_total: true %>
+      <% end %>
+      <tr>
+        <td colspan="3" class="text-center"><strong><%= t "carts.index.total" %></strong></td>
+        <td><strong><%= number_to_currency @order.subtotal %></strong></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

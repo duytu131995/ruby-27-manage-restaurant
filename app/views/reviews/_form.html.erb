@@ -1,0 +1,16 @@
+<div class="col-md-4">
+  <%= form_for [@dish, @review] do |f| %>
+    <span><%= t ".review" %></span>
+    <div id="star-rating"></div>
+    <br>
+    <%= f.label :content, t(".content") %>
+    <%= f.text_area :content, rows: 6, class: "form_control" %>
+    <%= f.submit t(".submit"), class: "btn btn-primary" %>
+  <% end %>
+</div>
+<script>
+$('#star-rating').raty({
+  path: '/assets/',
+  scoreName: 'review[rating]'
+})
+</script>

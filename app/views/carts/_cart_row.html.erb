@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="content clearfix">
+    <div class="col-md-2 text-center">
+      <h4><%= dish.name %></h4>
+    </div>
+    <div class="col-md-10">
+      <%= form_for order_item, remote: true do |f| %>
+        <div class="row">
+          <div class="col-md-3 text-center">
+            <h4><span class="text-success"><%= number_to_currency order_item.unit_price %></span></h4>
+          </div>
+          <div class="col-md-1 input-form-carts">
+            <div class="row">
+              <%= f.number_field :quantity, value: order_item.quantity.to_i, class: "form-control text-center", min: 1 %>
+              <%= f.hidden_field :dish_id, value: dish.id %>
+            </div>
+          </div>
+          <div class="col-md-3 text-center">
+            <%= f.submit t("carts.index.update"), class: "btn btn-sm btn-primary update" %>
+            <%= link_to t("carts.index.delete"), order_item, { data: { confirm: t("carts.index.confirm_delete") }, method: :delete, remote: true, class: "btn btn-sm btn-danger" } %>
+          </div>
+          <div class="col-md-2 text-center">
+            <span class="btn btn-sm btn-<%= order_item.success? ? 'success' : 'warning' %>">
+              <%= load_order_status order_item %>
+            </span>
+          </div>
+          <div class="col-md-3">
+            <h4 class="text-right"><span class="text-success"><%= number_to_currency order_item.total_price %></span></h4>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <hr>
+  </div>
+</div>

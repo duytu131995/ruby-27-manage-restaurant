@@ -63,9 +63,23 @@ account:"
         activated: "Activated"
         gender: "Gender"
         submit: "Close"
+        man: "Man"
+        women: "Women"
+        active: "Active"
+        unactive: "Unactive"
       user:
         show: "Show"
         edit: "Edit"
         delete: "Delete"
       find_user:
         danger: "Does not exist"
+      update:
+        success: "Update successfully!"
+        danger: "Update fail!"
+    session:
+      new:
+        login: "Login"
+      form:
+        email: "Email"
+        password: "Password"
+        submit: "Submit"

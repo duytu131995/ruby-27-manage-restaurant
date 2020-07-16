@@ -1,0 +1,11 @@
+<div class="col-md-2">
+  <div class="table panel panel-default">
+    <div class="panel-body">
+      <p><%= t "dinner_tables.index.chair" %>: <span><%= dinner_table.number_seats %></span></p>
+      <p><%= t "dinner_tables.index.status" %>: <span class="<%= dinner_table.free? ? 'text-danger' : 'text-primary'%>"><%= status_dinner_tabel dinner_table %></span></p>
+    </div>
+    <div class="panel-footer text-center">
+      <%= link_to "#{t('dinner_tables.name_table') + ' ' +dinner_table.table_number.to_s}", dinner_table_path(dinner_table), class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>

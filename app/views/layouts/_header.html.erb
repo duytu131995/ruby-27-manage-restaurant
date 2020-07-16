@@ -12,8 +12,9 @@
         </div>
         <div id="main-nav" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to t("header.home"), "index.html" %></li>
-            <li><%= link_to t("header.menu"), "index.html" %></li>
+            <li><%= link_to t("header.home"), root_path %></li>
+            <li><%= link_to t("header.dishes"), dishes_path %></li>
+            <li><%= link_to t("header.menu"), dinner_tables_path %></li>
             <li><%= link_to t("header.blog"), "index.html" %></li>
             <li><%= link_to t("header.contact"), "index.html" %></li>
             <li>

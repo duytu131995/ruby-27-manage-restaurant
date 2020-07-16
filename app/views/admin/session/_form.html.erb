@@ -1,20 +1,13 @@
-<%= form_for :session, url: admin_root_path do |f| %>
+<%= form_for :session, url: admin_login_path do |f| %>
   <div class="form-group">
-    <%= f.label :email, t("admin.email"), class: "small mb-1" %>
+    <%= f.label :email, t(".email"), class: "small mb-1" %>
     <%= f.email_field :email, class: "form-control py-4" %>
   </div>
   <div class="form-group">
-    <%= f.label :password, t("admin.password"), class: "small mb-1" %>
+    <%= f.label :password, t(".password"), class: "small mb-1" %>
     <%= f.password_field :password, class: "form-control py-4" %>
   </div>
-  <div class="form-group">
-    <%= f.label :remember_me, class: "custom-control custom-checkbox" do %>
-      <%= f.check_box :remember_me %>
-      <span><%= t "admin.remember_password" %></span>
-    <% end %>
-  </div>
   <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-    <%= link_to t("admin.forgot_password"), admin_root_path, class: "small" %>
-    <%= f.submit t("admin.login"), class: "btn btn-primary" %>
+    <%= f.submit t(".submit"), class: "btn btn-primary" %>
   </div>
 <% end %>
