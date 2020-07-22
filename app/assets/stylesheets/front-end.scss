@@ -1,0 +1,155 @@
+@import "color";
+
+body > .container{
+  min-height: 500px
+}
+
+.main-table{
+  margin-top: 100px;
+  margin-botton: 100px;
+  min-height: 500px;
+}
+
+.main-dish{
+  min-height: 500px;
+  margin-top: 30px;
+}
+
+.clearfix {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.main-order {
+  background: $grey;
+}
+
+.container.cart-orders {
+  min-height: 500px;
+}
+
+.cart-orders .contents {
+  background: $while;
+  border-radius: 2px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.cart-orders .table-cart{
+  margin-top: 25px;
+}
+.cart-orders tr.total-carts {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.cart-orders .quantity{
+  width: 100px;
+  margin: 0;
+}
+
+.cart-orders .update{
+  width: 60%;
+}
+
+.cart-orders .price{
+  color: $green;
+}
+
+.cart-orders hr{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.cart-orders .contents hr{
+  margin-bottom: 15px;
+}
+
+.cart-orders .totals span{
+  margin-top: 10px;
+  display: block;
+}
+
+.cart-orders .totals .contens-price {
+  margin-left: 10px;
+  background: $while;
+  border-radius: 2px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.cart-orders .totals .contens-price:first-child {
+  border-bottom: 1px solid $grey1;
+  padding-bottom: 10px;
+}
+
+.cart-orders .totals .contens-price .price-text{
+  float: left;
+}
+
+.cart-orders .totals .contens-price .price-number{
+  float: right;
+}
+
+.col-md-4.button-search-cart {
+  margin-left: -30px;
+}
+
+.input-form-carts input {
+  height: 31px;
+}
+
+.finish-orders {
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+.finish-orders a {
+  width: 100%;
+  background: $red0;
+  display: inline-block;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 1px;
+  color: $while;
+  font-size: 16px;
+}
+.view-action-orders a{
+  background: $blue0;
+}
+
+.content.dishes img,
+.order-dishes img{
+  height: 170px;
+  width: 100%;
+}
+
+.content.dishes .description {
+  height: 83px;
+  overflow: hidden;
+}
+
+.content.dishes .row.price {
+    margin-bottom: 10px;
+}
+
+.row.price{
+  margin-bottom: 20px;
+}
+
+.row.price span {
+  display: block;
+  font-size: 22px;
+}
+
+.row.price .text {
+  margin-top: 5px;
+}
+
+.dinner-tables .title {
+  margin-top: 20px;
+  margin-bottom: 24px;
+}

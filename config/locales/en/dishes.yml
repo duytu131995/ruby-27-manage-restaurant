@@ -7,6 +7,11 @@ en:
     price: "Price"
     image: "Image"
     update_success: "Update success"
+    description: "Description"
+    show:
+      title: "Write reviews"
+      noreview: "There are no reviews yet"
   image:
-    add_a_image: "Add a image"
+    image_type: "File!"
+    add_a_image: "Add image"
     delete: "Delete"

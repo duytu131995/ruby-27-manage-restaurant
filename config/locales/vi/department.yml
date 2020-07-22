@@ -1,36 +1,3 @@
 vi:
   find_department:
     danger: "Bộ phận không tồn tại"
-  admin:
-    departments:
-      index:
-        title_text: "Bộ phận nhân viên"
-        title: "Thêm mới"
-        description: "Chi tiết"
-        name_staff: "Tên bộ phận nhân viên"
-        description_staff: "Mô tả chi tiết"
-        quantity_staff: "Số lượng"
-        action_staff: "Hoạt động"
-      new:
-        button: "Gửi"
-        name: "Tên chức vụ"
-        description: "Mô tả chi tiết"
-      create:
-        success: "Thêm mới thành công!"
-        danger: "Thêm mới thất bại!"
-      update:
-        success: "Cập nhật thành công!"
-        danger: "Cập nhật thất bại!"
-      destroy:
-        success: "Xóa thành công!"
-        confirm: "Bạn có chắc chắn mốn xóa?"
-      department:
-        staff: "Nhân viên"
-        new:
-          title: "Thêm mới"
-          button_text: "Thêm nhân viên mới"
-        edit:
-          title: "Sửa"
-          button_text: "Sửa thông tin nhân viên"
-        delete: "Xóa"
-        submit: "Lưu"

@@ -34,3 +34,5 @@ manage_tables:
   per_page: 5
 orders:
   per_page: 5
+dinner_tables:
+  show: 4

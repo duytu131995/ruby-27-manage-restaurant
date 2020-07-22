@@ -1,0 +1,29 @@
+vi:
+  dinner_tables:
+    free: "Trống"
+    using: "Đang ăn"
+    name_table: "Bàn"
+    index:
+      list: "Danh sách bàn ăn"
+      status: "Trạng thái"
+      chair: "Số ghế"
+    show:
+      title: "Danh sách món ăn"
+      price: "Giá"
+      submit: "Thêm vào thực đơn"
+      order: "Thực đơn"
+      dish: "món ăn"
+      search:
+        title: "Tìm kiếm món ăn"
+        submit: "Tìm kiếm"
+      search_nil: "Món ăn hiện tại không có trong thực đơn"
+    member:
+      action: "Người phụ trách"
+    errors:
+      nologin: "Bạn chưa đăng nhập!"
+    orders:
+      success: "Thêm món thành công!"
+      danger: "Thêm món thất bại!"
+    destroy:
+      success: "Đã kết thúc phiên làm việc của bàn"
+      danger: "Kết thúc phiên làm việc thất bại!"

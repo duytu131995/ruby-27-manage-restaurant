@@ -9,9 +9,9 @@
         <p class="tm-gallery-price"><%= order_item.dish.price %> vnđ /
           <%= link_to admin_order_path(id: order_item.id), class: "premium-status", data: {id: order_item.id, remote: true} do %>
             <% if order_item.success? %>
-                <span class="badge badge-success"><%= t "order_item.order_item_success" %></span>
+                <span class="badge badge-success"><%= t "order_items.order_item_success" %></span>
               <% else %>
-                <span class="badge badge-danger"><%= t "order_item.order_item_pending" %></span>
+                <span class="badge badge-danger"><%= t "order_items.order_item_pending" %></span>
               <% end %>
           <% end %>
         </p>

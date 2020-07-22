@@ -14,6 +14,3 @@ vi:
     not_found: "Không tìm thấy thực đơn"
     title: "Quản lý bếp"
     order_item_not_found: "Không tìm thấy món hoặc đã được cập nhật"
-  order_item:
-    order_item_success: "Hoàn thành"
-    order_item_pending: "Đang chờ"

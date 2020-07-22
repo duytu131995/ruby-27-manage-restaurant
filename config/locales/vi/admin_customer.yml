@@ -12,6 +12,14 @@ vi:
       all_customer: "Danh sách khách hàng"
       not_found_user: "Không tìm thấy người dùng"
       list: "Bộ phận khách hàng"
+      status: "Trạng thái"
+      active: "Đã kích hoạt"
+      not_active: "Chưa kích hoạt"
+      placeholder_id: "Nhập vào id..."
+      placeholder_name: "Nhập vào name..."
+      placeholder_email: "Nhập vào email..."
+      placeholder_address: "Nhập vào address..."
+      button_search: "Tìm kiếm"
       edit:
         submit: "Cập nhật thông tin"
       update:

@@ -12,6 +12,14 @@ en:
     all_customer: "Customer List"
     not_found_user: "Not found user"
     list: "Customer Department"
+    status: "Status"
+    active: "Activated"
+    not_active: "Not Activated"
+    placeholder_id: "Input for id"
+    placeholder_name: "Input for name"
+    placeholder_email: "Input for email"
+    placeholder_address: "Input for adress"
+    button_search: "Search"
     edit:
       submit: "Update"
     update:

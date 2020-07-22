@@ -13,3 +13,8 @@ en:
     action: "Action"
     list_book_table: "List of book table"
     person: "Persons"
+    create_success: "Success"
+    create_error: "Error"
+    person: "Persons"
+    info: "Infomation"
+    account: "Account"

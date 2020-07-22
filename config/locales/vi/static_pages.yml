@@ -6,6 +6,7 @@ vi:
     blog: "Bài viết"
     login: "Đăng nhập"
     logout: "Đăng xuất"
+    dishes: "Danh sách món ăn"
   footer:
     copyright: "Bản quyền 2017 Victory Template"
     author: "Victory Template"
@@ -30,9 +31,3 @@ vi:
       featured_food: "Món ăn nổi bật"
       sign_up: "Đăng kí nhận thông tin tại đây"
       sign_up_submit: "Gửi ngay"
-  book_tables:
-    create_success: "Thành công"
-    create_error: "Thất bại"
-    person: "Số người"
-    info: "Thông tin"
-    account: "Tài khoản"

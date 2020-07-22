@@ -1,16 +1,105 @@
 vi:
   admin:
-    error: "error"
-    login: "Login"
+    error: "Lỗi"
+    login: "Đăng nhập"
     email: "Email"
-    password: "Password"
-    remember_password: "Remember password"
-    forgot_password: "Forgot Password?"
-    admin: "Admin"
-    dashboard: "Dashboard"
-    settings: "Settings"
-    logout: "Logout"
-    core: "Core"
-    logged_in_as: "Logged in as:"
-    department: "Departments"
+    password: "Mật khẩu"
+    remember_password: "Ghi nhớ mật khẩu"
+    forgot_password: "Quên mật khẩu?"
+    admin: "Quản trị"
+    dashboard: "Bảng điều khiển"
+    settings: "Cài đặt"
+    logout: "Thoát"
+    core: "Chính"
+    logged_in_as: "Đăng nhập bởi:"
+    department: "Bộ phận nhân sự"
     users_db: "Nhân viên"
+    users:
+      create:
+        danger: "Tạo mới thất bại!"
+        success: "Tạo mới thành công!"
+      new:
+        button_text: "Thêm nhân viên mới"
+      index:
+        title: "Quản lý nhân viên"
+        create_new: "Tạo mới"
+        name: "Tên nhân viên"
+        department: "Bộ phận"
+        status: "Hoạt động"
+      form:
+        name: "Họ và Tên"
+        email: "Địa chỉ email"
+        address: "Địa chỉ"
+        phone: "Số điện thoại"
+        birthday: "Ngày sinh"
+        department: "Bộ phận"
+        activated: "Kích hoạt"
+        gender: "Giới tính"
+        man: "Nam"
+        women: "Nữ"
+        password: "Mật khẩu"
+        password_confirmation: "Nhập lại mật khẩu"
+        submit: "Gửi"
+      show:
+        details_user: "Thông tin chi tiết nhân viên"
+        name: "Họ và Tên"
+        email: "Địa chỉ email"
+        address: "Địa chỉ"
+        phone: "Số điện thoại"
+        birthday: "Ngày sinh"
+        department: "Bộ phận"
+        activated: "Trạng thái"
+        gender: "Giới tính"
+        close: "Đóng"
+        man: "Nam"
+        women: "Nữ"
+        active: "Đã kích hoạt"
+        unactive: "Chưa kích hoạt"
+      user:
+        show: "Xem"
+        edit: "Sửa"
+        delete: "Xóa"
+      find_user:
+        danger: "Không tồn tại"
+      update:
+        success: "Cập nhật thành công"
+        danger: "Cập nhật thất bại"
+    session:
+      new:
+        login: "Đăng nhập"
+      form:
+        email: "Địa chỉ email"
+        password: "Mật khẩu"
+        submit: "Đăng nhập"
+    departments:
+      index:
+        title_text: "Bộ phận nhân viên"
+        title: "Thêm mới"
+        description: "Chi tiết"
+        name_staff: "Tên bộ phận nhân viên"
+        description_staff: "Mô tả chi tiết"
+        quantity_staff: "Số lượng"
+        action_staff: "Hoạt động"
+      new:
+        button: "Gửi"
+        name: "Tên chức vụ"
+        description: "Mô tả chi tiết"
+      create:
+        success: "Thêm mới thành công!"
+        danger: "Thêm mới thất bại!"
+      update:
+        success: "Cập nhật thành công!"
+        danger: "Cập nhật thất bại!"
+      destroy:
+        success: "Xóa thành công!"
+        confirm: "Bạn có chắc chắn mốn xóa?"
+      department:
+        staff: "Nhân viên"
+        new:
+          title: "Thêm mới"
+          button_text: "Thêm phòng ban"
+        edit:
+          title: "Sửa"
+          button_text: "Sửa thông tin phòng ban"
+        delete: "Xóa"
+        submit: "Lưu"

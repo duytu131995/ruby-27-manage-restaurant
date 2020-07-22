@@ -1,36 +1,3 @@
 en:
   find_department:
     danger: "Does not exist department"
-  admin:
-    departments:
-      index:
-        title_text: "Departments"
-        title: "New"
-        description: "Description"
-        name_staff: "Name"
-        description_staff: "Description"
-        quantity_staff: "Quantity"
-        action_staff: "Action"
-      new:
-        button: "Submit"
-        name: "Name"
-        description: "Description"
-      create:
-        success: "New creation successfully!"
-        danger: "New creation failed!"
-      update:
-        success: "Update successfully!"
-        danger: "Update failed!"
-      destroy:
-        success: "Delete successfully!"
-        confirm: "Are you sure?"
-      department:
-        staff: "Staff"
-        new:
-          title: "Create new"
-          button_text: "Create new"
-        edit:
-          title: "Edit"
-          button_text: "Edit"
-        delete: "Delete"
-        submit: "Submit"

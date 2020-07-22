@@ -1,0 +1,29 @@
+en:
+  dinner_tables:
+    free: "Free"
+    using: "Using"
+    name_table: "Tabel"
+    index:
+      list: "List table"
+      status: "Status"
+      chair: "Chair number"
+    show:
+      title: "List dish"
+      price: "Price"
+      submit: "Add order"
+      order: "Order"
+      dish: "dish"
+      search:
+        title: "Search"
+        submit: "Search"
+      search_nil: "Current dishes are not on the menu"
+    member:
+      action: "the person in charge"
+    errors:
+      nologin: "You are not logged in!"
+    orders:
+      success: "Add success dish!"
+      danger: "Add fail dish"
+    destroy:
+      success: "Đã kết thúc phiên làm việc của bàn"
+      danger: "Kết thúc phiên làm việc thất bại!"

@@ -14,6 +14,3 @@ en:
     not_found: "Not found order"
     title: "Kitchen Manage"
     order_item_not_found: "Not found item"
-  order_item:
-    order_item_success: "Success"
-    order_item_pending: "Pending"

@@ -1,0 +1,28 @@
+en:
+  carts:
+    index:
+      continue: "Continue order"
+      finish: "Finish"
+      out_table: "End of the working session of the dining table?"
+      dish: "Dish"
+      name: "Name"
+      status: "Status"
+      price: "Price"
+      quantity: "Auantity"
+      action: "Action"
+      subtotal: "Subtotal"
+      total: "Total"
+      update: "Update"
+      delete: "Delete"
+      confirm_delete: "Are you sure?"
+      inorders: "Order detail"
+    update:
+      success: "Update successfully!"
+      danger: "Update fail!"
+    delete:
+      success: "Delete successfully!"
+      danger: "Delete fail!"
+    zero:
+      text: "There are no dishes on the menu. Please %{link1} and add the dishes to the menu. Or %{link2} the order ending session."
+      link1: "come back"
+      link2: "finish"

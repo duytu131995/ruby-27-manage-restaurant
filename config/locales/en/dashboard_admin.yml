@@ -14,3 +14,92 @@ en:
     logged_in_as: "Logged in as:"
     department: "Departments"
     users_db: "Users"
+    users:
+      create:
+        danger: "Create new fail!"
+        success: "Create new successfully!"
+      new:
+        button_text: "Create new user"
+      index:
+        title: "Employee manager"
+        create_new: "Create new"
+        name: "Name"
+        department: "Department"
+        status: "Status"
+      form:
+        name: "Name"
+        email: "Email"
+        address: "Address"
+        phone: "Phone"
+        birthday: "Birthday"
+        department: "Department"
+        activated: "Activated"
+        gender: "Gender"
+        man: "Man"
+        women: "Women"
+        password: "Password"
+        password_confirmation: "Password_confirmation"
+        submit: "Submit"
+      show:
+        details_user: "Employee details"
+        name: "Name"
+        email: "Email"
+        address: "Address"
+        phone: "Phone"
+        birthday: "Birthday"
+        department: "Department"
+        activated: "Activated"
+        gender: "Gender"
+        submit: "Close"
+        man: "Man"
+        women: "Women"
+        active: "Active"
+        unactive: "Unactive"
+      user:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+      find_user:
+        danger: "Does not exist"
+      update:
+        success: "Update successfully!"
+        danger: "Update fail!"
+    session:
+      new:
+        login: "Login"
+      form:
+        email: "Email"
+        password: "Password"
+        submit: "Submit"
+    departments:
+      index:
+        title_text: "Departments"
+        title: "New"
+        description: "Description"
+        name_staff: "Name"
+        description_staff: "Description"
+        quantity_staff: "Quantity"
+        action_staff: "Action"
+      new:
+        button: "Submit"
+        name: "Name"
+        description: "Description"
+      create:
+        success: "New creation successfully!"
+        danger: "New creation failed!"
+      update:
+        success: "Update successfully!"
+        danger: "Update failed!"
+      destroy:
+        success: "Delete successfully!"
+        confirm: "Are you sure?"
+      department:
+        staff: "Staff"
+        new:
+          title: "Create new"
+          button_text: "Create new"
+        edit:
+          title: "Edit"
+          button_text: "Edit"
+        delete: "Delete"
+        submit: "Submit"
