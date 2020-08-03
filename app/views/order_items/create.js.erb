@@ -1,6 +1,6 @@
 $('.notification').html('')
 $('.notification').show()
-<% if current_user %>
+<% if current_admin_user %>
   <% if @order.errors.any? || @order_item.errors.any? %>
     $('.notification').append('<div class="alert alert-danger"><%= t "dinner_tables.orders.danger" %></div>')
   <% else %>

@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="modal-body">
+    <p><%= t ".name" %>: <span class="name"><%= @user.name %></span></p>
+    <p><%= t ".email" %>: <span class="email"><%= @user.email %></span></p>
+    <p><%= t ".address" %>: <span class="address"><%= @user.address %></span></p>
+    <p><%= t ".phone" %>: <span class="phone"><%= @user.phone %></span></p>
+    <p><%= t ".department" %>: <span class="department"><%= @user.department_name %></span></p>
+    <p><%= t ".gender" %>: <span class="gender"><%= t ".#{@user.gender}" %></span></p>
+    <p><%= t ".birthday" %>: <span class="birthday"><%= @user.birthday %></span></p>
+  </div>
+</div>

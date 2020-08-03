@@ -8,7 +8,7 @@ class OrderItemsController < ApplicationController
   end
 
   def create
-    create_order_and_order_items if current_user
+    create_order_and_order_items if current_admin_user
   end
 
   def update
@@ -38,7 +38,7 @@ class OrderItemsController < ApplicationController
 
   def create_order_and_order_items
     @order.dinner_table_id = session[:params_id] unless @order.dinner_table_id?
-    @order.user_id = current_user.id unless @order.user_id?
+    @order.user_id = current_admin_user.id unless @order.user_id?
     @order.save
     status_table = DinnerTable.find_by id: @order.dinner_table_id
     status_table.update(status: :using) if status_table.free?

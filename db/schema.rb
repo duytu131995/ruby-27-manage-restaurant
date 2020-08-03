@@ -96,19 +96,20 @@ ActiveRecord::Schema.define(version: 2020_08_03_014840) do
     t.bigint "dish_id", null: false
     t.integer "status", default: 0, null: false
     t.integer "quantity"
-    t.decimal "unit_price", precision: 3
-    t.decimal "total", precision: 3
+    t.decimal "unit_price", precision: 65
+    t.decimal "total", precision: 65
     t.index ["dish_id"], name: "index_order_items_on_dish_id"
     t.index ["order_id"], name: "index_order_items_on_order_id"
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.decimal "prices", precision: 10
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.integer "payment_method", default: 0, null: false
-    t.decimal "total", precision: 3
-    t.decimal "subtotal", precision: 3
+    t.decimal "total", precision: 65
+    t.decimal "subtotal", precision: 65
     t.bigint "dinner_table_id", null: false
     t.integer "status", default: 0
     t.index ["dinner_table_id"], name: "index_orders_on_dinner_table_id"
@@ -156,22 +157,22 @@ ActiveRecord::Schema.define(version: 2020_08_03_014840) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "email"
     t.string "name"
     t.string "address"
-    t.string "password_digest"
-    t.string "activation_digest"
-    t.integer "activated", limit: 1, default: 0
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.bigint "department_id"
-    t.integer "role", default: 2, null: false
     t.date "birthday"
     t.string "phone"
     t.integer "gender", default: 0, null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.datetime "deleted_at"
     t.index ["deleted_at"], name: "index_users_on_deleted_at"
     t.index ["department_id"], name: "index_users_on_department_id"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   create_table "work_shifts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|

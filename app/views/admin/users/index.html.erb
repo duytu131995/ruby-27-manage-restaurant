@@ -6,7 +6,7 @@
       <%= collection_select :user, :department_id, @departments, :id, :name, {}, class: "form-control" %>
     </div>
     <div class="create float-right">
-      <%= link_to t(".create_new"), new_admin_user_path, "data-toggle": "modal", "data-target": "#myModal-form-user", remote: true, class: "btn btn-primary" %>
+      <%= link_to t(".create_new"), new_admin_user_registration_path, class: "btn btn-primary" %>
     </div>
   </div>
   <table class="table table-striped">

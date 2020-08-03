@@ -1,7 +1,7 @@
  <tr>
   <th scope="row"><%= order_invoice_counter + 1 %></th>
   <th scope="row"><%= order_invoice.dinner_table_table_number %></th>
-  <td><%= number_to_currency order_invoice.total %></td>
+  <td><%= number_to_currency order_invoice.subtotal %></td>
   <td>
     <span class="<%= load_status_order order_invoice.status %>"><%= t "order.#{order_invoice.status}" %></span>
   </td>

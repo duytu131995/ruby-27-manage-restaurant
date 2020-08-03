@@ -35,7 +35,7 @@ class Admin::AdminCustomersController < AdminController
   private
 
   def fetch_search_result
-    @search_customer = User.customer.search params[:q]
+    @search_customer = User.search params[:q]
     if @search_customer.present?
       @search_result = @search_customer.result
     else

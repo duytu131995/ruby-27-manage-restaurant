@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :find_user, only: :show
+
   include ApplicationHelper
 
   def index
@@ -8,6 +10,8 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
+
+  def show; end
 
   def create
     @user = User.new user_params
@@ -25,5 +29,13 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit User::PERMIT_ATTRIBUTES
+  end
+
+  def find_user
+    @user = User.find_by id: params[:id]
+    return @user if @user
+
+    flash[:danger] = t ".danger"
+    redirect_to root_url
   end
 end

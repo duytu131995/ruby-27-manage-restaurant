@@ -15,18 +15,18 @@
             <li><%= link_to t("header.home"), root_path %></li>
             <li><%= link_to t("header.menu"), dinner_tables_path %></li>
             <li><%= link_to t("search.search_button"), dishes_path %></li>
-            <% if logged_in %>
+            <% if admin_user_signed_in? %>
               <li>
                 <div class="dropdown">
                   <%= link_to t("book_tables.account"), "#" %>
                   <div class="dropdown-content">
-                     <p><%= link_to t("book_tables.info"), users_path %></p>
-                     <p><%= link_to t("header.logout"), logout_path, method: :delete %></p>
+                     <p><%= link_to t("book_tables.info"), user_path(current_admin_user) %></p>
+                     <p><%= link_to t("header.logout"), destroy_admin_user_session_path, method: :delete %></p>
                   </div>
                 </div>
               </li>
             <% else %>
-              <li><%= link_to t("header.login"), login_path %></li>
+              <li><%= link_to t("header.login"), new_admin_user_session_path %></li>
             <% end %>
           </ul>
         </div>

@@ -3,12 +3,12 @@ Rails.application.routes.draw do
     root "static_pages#index"
     namespace :admin do
       root "admin#index"
-      get "/login", to: "session#new"
+      devise_for :users, controllers: {registrations: "admin/registrations", sessions: "admin/sessions"}
+      resources :users, only: %i(index show)
       resources :admin_customers
       resources :departments
       resources :dish_types
       resources :dishes
-      resources :users
       resources :table_manage
       resources :book_tables, only: %i(index edit update)
       resources :orders, only: %i(index show update)

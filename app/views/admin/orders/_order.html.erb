@@ -1,7 +1,7 @@
  <tr>
   <th scope="row"><%= order_counter + 1 %></th>
   <th scope="row"><%= order.dinner_table_table_number %></th>
-  <td><%= order.total %></td>
+  <td><%= order.subtotal %></td>
   <td><%= order.user_name %></td>
   <td>
     <% if order.order_items.any?(&:pending?) %>

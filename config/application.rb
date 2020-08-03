@@ -13,5 +13,6 @@ module ManageRestaurant
     config.middleware.use I18n::JS::Middleware
     config.action_view.embed_authenticity_token_in_remote_forms = true
     config.serve_static_assets = true
+    config.autoloader = :classic
   end
 end
