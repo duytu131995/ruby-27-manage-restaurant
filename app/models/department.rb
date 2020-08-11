@@ -1,4 +1,6 @@
 class Department < ApplicationRecord
+  acts_as_paranoid
+
   DEPARTMENT_PARAMS = %i(name description).freeze
 
   has_many :users, dependent: :destroy

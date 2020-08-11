@@ -153,3 +153,34 @@ body > .container{
   margin-top: 20px;
   margin-bottom: 24px;
 }
+
+span.free{
+  color: $free;
+}
+
+span.paid{
+  color: $paid;
+}
+
+span.unpaid{
+  color: $unpaid;
+}
+
+span.using{
+  color: $using;
+}
+
+.notificationtb{
+  padding: 10px;
+  background: #f5b700;
+  border-radius: 2px;
+}
+
+.container.modal-body{
+  width: 70%;
+}
+
+input#user_gender_man,
+input#user_gender_women{
+  width: auto;
+}

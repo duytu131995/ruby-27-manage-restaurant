@@ -13,18 +13,21 @@
     <div class="col-md-12">
       <div class="row">
         <div class="search col-md-4">
-          <%= form_tag dinner_table_path, method: :get, class: "form-search" do %>
+          <%= search_form_for @q, url: dinner_table_path(session[:params_id]) do |f| %>
             <div class="row">
               <div class="col-md-8">
-                <%= text_field_tag :search, params[:search], placeholder: t(".search.title"), class: "form-control" %>
+                <%= f.search_field :name_or_description_cont, placeholder: t(".search.title"), class: "form-control" %>
               </div>
               <div class="col-md-4 button-search-cart">
-                <%= submit_tag t(".search.submit"), class: "btn btn-secondary" %>
+                <%= f.submit t(".search.submit"), class: "btn btn-secondary" %>
               </div>
             </div>
           <% end %>
         </div>
       </div>
+      <%= link_to "Quay lại", :back %>&emsp;&emsp;<%= link_to "Làm mới", dinner_table_path(session[:params_id]) %>
+      <br>
+      <br>
     </div>
     <div class="col-md-12">
       <% if @dishes.size == 0 %>

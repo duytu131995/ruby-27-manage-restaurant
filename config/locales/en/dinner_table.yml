@@ -6,6 +6,8 @@ en:
       danger: "Does not exist dinner tabler"
     free: "Free"
     using: "Using"
+    paid: "Paid"
+    unpaid: "Unpaid"
     name_table: "Tabel"
     index:
       list: "List table"
@@ -34,3 +36,6 @@ en:
     update_atributes:
       info: "Update successfully!"
       danger: "Update fail!"
+    update:
+      success: "Successfully!"
+      danger: "Fail!"

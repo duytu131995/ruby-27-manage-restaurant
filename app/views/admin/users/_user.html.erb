@@ -4,8 +4,12 @@
   <td class="department"><%= user.department_name %></td>
   <td class="status">
     <%= link_to t(".show"), [:admin, user], class: "btn btn-primary" %>
-    <% if can? :update, user %>
+    <% if current_admin_user&.admin? %>
       <%= link_to t(".edit"), edit_admin_user_path(user), class: "btn btn-warning" %>
+    <% else %>
+      <% if can? :update, user %>
+        <%= link_to t(".edit"), edit_admin_user_registration_path, class: "btn btn-warning" %>
+      <% end %>
     <% end %>
     <% if can? :destroy, user %>
       <%= link_to t(".delete"), admin_user_path(user), method: :delete, data: {confirm: t(".confirm")}, class: "btn btn-danger" %>

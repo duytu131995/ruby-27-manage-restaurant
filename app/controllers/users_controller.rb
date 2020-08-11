@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   include ApplicationHelper
 
   def index
-    @book_tables = BookTable.page(params[:page]).per Settings.dishes.per_page
+    @book_tables = BookTable.by_attributes(current_admin_user.id).page(params[:page]).per Settings.dishes.per_page
   end
 
   def show; end

@@ -1,59 +1,58 @@
 <%= form_for resource, as: resource_name, url: registration_path(resource_name) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
   <div class="row">
     <div class="col-md-6">
       <% unless current_admin_user %>
-        <%= f.hidden_field :department_id, value: 1 %>
+        <%= f.hidden_field :department_id, value: 9 %>
       <% end %>
       <% if current_admin_user&.admin? %>
         <div class="form-group">
           <%= f.label :department_id, t("sign_ups.department") %>
-          <%= f.select :department_id, options_for_select(@departments), {}, {class: "form-control"} %>
+          <%= f.select :department_id, options_for_select(@departments, resource.department_id), {}, {class: "form-control"} %>
         </div>
       <% end %>
       <div class="form-group">
         <%= f.label :name, t("sign_ups.name") %>
-        <%= f.text_field :name, class: "form-control" %>
-        <p class="error-name reset-error"></p>
+        <%= f.text_field :name, class: "form-control #{errors_textfield(f, :name)}" %>
+        <p id="error_explanation"><%= show_errors(f, :name) %></p>
       </div>
       <div class="form-group">
         <%= f.label :email, t("sign_ups.email") %>
-        <%= f.text_field :email, class: "form-control" %>
-        <p class="error-email reset-error"></p>
+        <%= f.text_field :email, class: "form-control #{errors_textfield(f, :email)}" %>
+        <p id="error_explanation"><%= show_errors(f, :email) %></p>
       </div>
       <div class="form-group">
         <%= f.label :password, t("sign_ups.password") %>
-        <%= f.password_field :password, class: "form-control" %>
-        <p class="error-password reset-error"></p>
+        <%= f.password_field :password, class: "form-control #{errors_textfield(f, :password)}" %>
+        <p id="error_explanation"><%= show_errors(f, :password) %></p>
       </div>
       <div class="form-group">
         <%= f.label :password_confirmation, t("sign_ups.password_confirmation") %>
-        <%= f.password_field :password_confirmation, class: "form-control" %>
-        <p class="error-password_confirmation reset-error"></p>
+        <%= f.password_field :password_confirmation, class: "form-control #{errors_textfield(f, :password_confirmation)}" %>
+        <p id="error_explanation"><%= show_errors(f, :password_confirmation) %></p>
       </div>
       <% if current_admin_user %>
         <div class="form-group">
           <%= f.label :current_password, t("sign_ups.current_password") %>
-          <%= f.password_field :current_password, class: "form-control" %>
-          <p class="error-password_confirmation reset-error"></p>
+          <%= f.password_field :current_password, class: "form-control #{errors_textfield(f, :current_password)}" %>
+          <p id="error_explanation"><%= show_errors(f, :current_password) %></p>
         </div>
       <% end %>
     </div>
     <div class="col-md-6">
       <div class="form-group">
         <%= f.label :address, t("sign_ups.address") %>
-        <%= f.text_field :address, class: "form-control" %>
-        <p class="error-address reset-error"></p>
+        <%= f.text_field :address, class: "form-control #{errors_textfield(f, :address)}" %>
+        <p id="error_explanation"><%= show_errors(f, :address) %></p>
       </div>
       <div class="form-group">
         <%= f.label :phone, t("sign_ups.phone") %>
-        <%= f.text_field :phone, class: "form-control" %>
-        <p class="error-phone reset-error"></p>
+        <%= f.text_field :phone, class: "form-control #{errors_textfield(f, :phone)}" %>
+        <p id="error_explanation"><%= show_errors(f, :phone) %></p>
       </div>
       <div class="form-group">
         <%= f.label :birthday, t("sign_ups.birthday") %>
-        <%= f.datetime_local_field :birthday, class: "form-control" %>
-        <p class="error-birthday reset-error"></p>
+        <%= f.datetime_local_field :birthday, class: "form-control #{errors_textfield(f, :birthday)}" %>
+        <p id="error_explanation"><%= show_errors(f, :birthday) %></p>
       </div>
       <% if current_admin_user&.admin? %>
         <div class="form-group">

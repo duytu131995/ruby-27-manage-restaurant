@@ -6,6 +6,8 @@ vi:
       danger: "Không tồn tại"
     free: "Trống"
     using: "Đang ăn"
+    paid: "Đã thanh toán"
+    unpaid: "Chưa thanh toán"
     name_table: "Bàn"
     index:
       list: "Danh sách bàn ăn"
@@ -34,3 +36,6 @@ vi:
     update_atributes:
       info: "Cập nhật thành công!"
       danger: "Cập nhật thất bại!"
+    update:
+      success: "Cập nhật trạng thái thành công"
+      danger: "Cập nhật trạng thái thất bại"

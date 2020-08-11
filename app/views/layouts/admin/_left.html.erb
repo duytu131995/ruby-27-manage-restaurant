@@ -3,6 +3,10 @@
     <div class="sb-sidenav-menu">
       <div class="nav">
         <div class="sb-sidenav-menu-heading"><%= t "admin.core" %></div>
+        <%= link_to admin_users_path, class: "nav-link" do %>
+          <div class="sb-nav-link-icon"><i class="fa fa-user" aria-hidden="true"></i></div>
+          <%= t "admin.users_db" %>
+        <% end %>
         <% if current_admin_user.admin? %>
           <%= link_to admin_root_path, class: "nav-link" do %>
             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
@@ -11,10 +15,6 @@
           <%= link_to admin_departments_path, class: "nav-link" do %>
             <div class="sb-nav-link-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
             <%= t "admin.departments.index.title_text" %>
-          <% end %>
-          <%= link_to admin_users_path, class: "nav-link" do %>
-            <div class="sb-nav-link-icon"><i class="fa fa-user" aria-hidden="true"></i></div>
-            <%= t "admin.users_db" %>
           <% end %>
           <%= link_to admin_dish_types_path, class: "nav-link" do %>
             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
@@ -29,7 +29,7 @@
             <%= t "admin_customer.list" %>
           <% end %>
         <% end %>
-        <% if current_admin_user.chef? || current_admin_user.admin? %>
+        <% if current_admin_user.chef? || current_admin_user.admin? || current_admin_user.waiters? %>
           <%= link_to admin_orders_path, class: "nav-link" do %>
             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
             <%= t "order.title" %>

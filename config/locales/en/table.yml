@@ -1,0 +1,10 @@
+en:
+  tables:
+    title: "Thông tin bàn ăn"
+    text: "Chưa có bàn ăn"
+    book: "Đặt bàn ngay"
+    booked: "Bàn ăn đã đặt"
+    table: "Bàn số"
+    people: "Số người"
+    time: "Thời gian"
+    cancel: "Hủy bàn"

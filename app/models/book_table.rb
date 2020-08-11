@@ -11,4 +11,5 @@ class BookTable < ApplicationRecord
                 cancel: 4}
 
   scope :sort_status, ->{order status: :asc}
+  scope :by_attributes, ->(id){where user_id: id}
 end

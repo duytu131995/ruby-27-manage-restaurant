@@ -5,7 +5,7 @@ class Admin::UsersController < AdminController
   load_and_authorize_resource
 
   def index
-    @users = User.includes(:department).page(params[:page]).per Settings.users.per
+    @users = User.includes(:department).where.not(role: :customer).page(params[:page]).per Settings.users.per
   end
 
   def show; end

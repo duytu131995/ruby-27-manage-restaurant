@@ -1,4 +1,4 @@
-<div class="col-md-3">
+<div class="col-sm-6 col-md-3">
   <div class="card">
     <div class="card-header">
       <div>
@@ -8,7 +8,11 @@
     <div class="card-body">
       <h5 class="card-title"><p><%= t "table_manage.number_seat" %><%= table_manage.number_seats %></p></h5>
       <div class="button-status">
-         <span class="badge badge-<%= table_badge_show table_manage %>"><%= table_status_show table_manage %></span>
+        <%= form_for table_manage, url: dinner_table_path(table_manage), remote: true do |f| %>
+          <%= f.select :status, options_for_select([[t('dinner_tables.using'), "using"], [t('dinner_tables.free'), "free"], [t('dinner_tables.paid'), "paid"], [t('dinner_tables.unpaid'), "unpaid"]], table_manage.status), {}, {class: "form-control"} %>
+          <br>
+          <%= f.submit t("carts.index.update"), class: "btn btn-primary" %>
+        <% end %>
       </div>
     </div>
   </div>

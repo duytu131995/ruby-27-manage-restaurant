@@ -79,6 +79,9 @@ account:"
         danger: "Update fail!"
       edit:
         button_text: "Edit user"
+      destroy:
+        success: "Successfully!"
+        danger: "Fail!"
     session:
       new:
         login: "Login"

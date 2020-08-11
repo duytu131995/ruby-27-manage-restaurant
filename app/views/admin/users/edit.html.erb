@@ -17,14 +17,17 @@
             <p class="error-email reset-error"></p>
           </div>
           <div class="form-group">
-            <%= f.label :password, t("sign_ups.password") %>
-            <%= f.password_field :password, class: "form-control" %>
-            <p class="error-password reset-error"></p>
-          </div>
-          <div class="form-group">
-            <%= f.label :password_confirmation, t("sign_ups.password_confirmation") %>
-            <%= f.password_field :password_confirmation, class: "form-control" %>
-            <p class="error-password_confirmation reset-error"></p>
+            <%= f.label :gender, t("sign_ups.gender") %>
+            <div class="row">
+              <div class="col-md-3 man">
+                <%= f.label :gender, t("sign_ups.man") %>
+                <%= radio_button "user", "gender", "man", checked: true %>
+              </div>
+              <div class="col-md-5 women">
+                <%= f.label :gender, t("sign_ups.women") %>
+                <%= radio_button "user", "gender", "women" %>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-md-6">
@@ -46,19 +49,6 @@
           <div class="form-group">
             <%= f.label :role, t("sign_ups.role") %>
             <%= f.select :role, options_for_select(["admin", "customer", "waiters", "receptionists", "chef"], @user.role),{} , class: "form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :gender, t("sign_ups.gender") %>
-            <div class="row">
-              <div class="col-md-3 man">
-                <%= f.label :gender, t("sign_ups.man") %>
-                <%= radio_button "user", "gender", "man", checked: true %>
-              </div>
-              <div class="col-md-5 women">
-                <%= f.label :gender, t("sign_ups.women") %>
-                <%= radio_button "user", "gender", "women" %>
-              </div>
-            </div>
           </div>
         </div>
       </div>

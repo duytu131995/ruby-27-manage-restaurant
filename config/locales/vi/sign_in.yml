@@ -5,3 +5,4 @@ vi:
     password: "Mật khẩu"
     email: "Tài khoản"
     forgot_password: "Quên mật khẩu?"
+    success: "Đăng nhập thành công"

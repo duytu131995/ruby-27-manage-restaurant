@@ -1,0 +1,33 @@
+@import "color.scss";
+
+.alert-error {
+  background-color: $error_alert;
+  border-color: $error_alert1;
+  color: $error_alert2;
+  text-align: left;
+  margin: 0px;
+}
+
+.alert-alert {
+  background-color: $error_alert;
+  border-color: $error_alert1;
+  color: $error_alert2;
+  text-align: left;
+  margin: 0px;
+}
+
+.alert-success {
+  background-color: $success_notice;
+  border-color: $success_notice1;
+  color: $success_notice2;
+  text-align: left;
+  margin: 0px;
+}
+
+.alert-notice {
+  background-color: $success_notice;
+  border-color: $success_notice1;
+  color: $success_notice2;
+  text-align: left;
+  margin: 0px;
+}

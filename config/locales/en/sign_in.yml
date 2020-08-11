@@ -5,3 +5,4 @@ en:
     password: "Password"
     email: "Email"
     forgot_password: "Forgot your password"
+    success: "Sign in successfully"

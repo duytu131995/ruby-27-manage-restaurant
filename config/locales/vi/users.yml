@@ -76,6 +76,9 @@ vi:
         danger: "Cập nhật thất bại"
       edit:
         button_text: "Sửa thông tin nhân viên"
+      destroy:
+        success: "Xóa thành công!"
+        danger: "Xóa thất bại!"
     session:
       new:
         login: "Đăng nhập"

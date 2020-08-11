@@ -5,7 +5,7 @@ vi:
     number_seat: "Số ghế ngồi: "
     status: "Tình trạng"
     time: "Thời gian sử dụng"
-    table_on: "Đã sử dụng"
+    table_on: "Đang sử dụng"
     table_off: "Đang còn trống"
     name: "Quản lý bàn"
     total_table: "Tổng số bàn"
