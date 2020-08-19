@@ -6,6 +6,8 @@ require "rspec/rails"
 require "shoulda/matchers"
 require "capybara/rspec"
 require "support/database_cleaner"
+require "support/have_http_status_success"
+require "support/dinner_table"
 require "sidekiq/testing"
 
 begin
@@ -31,7 +33,7 @@ Shoulda::Matchers.configure do |config|
 end
 
 RSpec::Sidekiq.configure do |config|
-  config.clear_all_enqueued_jobs = true 
-  config.enable_terminal_colours = true 
+  config.clear_all_enqueued_jobs = true
+  config.enable_terminal_colours = true
   config.warn_when_jobs_not_processed_by_sidekiq = true
 end

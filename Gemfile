@@ -34,6 +34,7 @@ gem "turbolinks", "~> 5"
 gem "webpacker", "~> 4.0"
 
 group :development, :test do
+  gem "action-cable-testing", "~> 0.6.1"
   gem "database_cleaner"
   gem "factory_bot_rails"
   gem "pry-rails"
