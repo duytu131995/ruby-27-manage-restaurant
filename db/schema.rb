@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_10_122217) do
+ActiveRecord::Schema.define(version: 2020_08_31_155116) do
 
   create_table "book_tables", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.datetime "start_time"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 2020_08_10_122217) do
     t.integer "status", default: 0, null: false
     t.integer "person"
     t.index ["user_id"], name: "index_book_tables_on_user_id"
+  end
+
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "commentable_id"
+    t.string "commentable_type"
+    t.index ["commentable_id"], name: "index_comments_on_commentable_id"
+    t.index ["commentable_type"], name: "index_comments_on_commentable_type"
   end
 
   create_table "departments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -173,6 +183,8 @@ ActiveRecord::Schema.define(version: 2020_08_10_122217) do
     t.datetime "deleted_at"
     t.integer "activated", limit: 1, default: 0
     t.integer "role", default: 2, null: false
+    t.string "provider"
+    t.string "uid"
     t.index ["deleted_at"], name: "index_users_on_deleted_at"
     t.index ["department_id"], name: "index_users_on_department_id"
     t.index ["email"], name: "index_users_on_email", unique: true

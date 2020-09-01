@@ -61,7 +61,7 @@
               <div class="col-md-8">
                 <div class="product-content shop-list">
                   <h3><a href="#"><%= dish.name %></a></h3>
-                  <p><%= dish.description %></p>
+                  <p><%= truncate(dish.description, length: Settings.truncate.dish_description) %></p>
                   <div class="price">
                     <span><%= number_to_currency(dish.price, unit: "vnđ") %> </span>
                     <span><del></del></span>

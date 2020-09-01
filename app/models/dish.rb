@@ -5,6 +5,7 @@ class Dish < ApplicationRecord
   belongs_to :dish_type
   has_many :images, dependent: :destroy
   has_many :order_item, dependent: :delete_all
+  has_many :comments, as: :commentable, dependent: :destroy
 
   validates :name,  presence: true
   validates :price, numericality:
@@ -18,4 +19,5 @@ class Dish < ApplicationRecord
   scope :by_attributes, (lambda do |param|
     where("name LIKE :search", search: "%#{param}%").or(where("description LIKE :search", search: "%#{param}%"))
   end)
+  scope :by_created_at, ->{order created_at: :desc}
 end

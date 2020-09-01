@@ -1,0 +1,9 @@
+<% if @commentable.instance_of?(Dish) %>
+  $('#comment-nested').html('<%= j render partial: 'comments/comment', collection: @commentable.comments.by_created_at %>');
+  $('#content-text').val('');
+  toastr.success(I18n.t('comment.success'))
+<% else %>
+  $('#comment-nested-<%= @commentable.id %>').prepend('<%= j render partial: 'comments/comment', collection: @commentable.comments.by_created_at %>');
+  $('#content-text-<%= @commentable.id %>').val('');
+  toastr.success(I18n.t('comment.reply_success'))
+<% end %>

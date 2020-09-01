@@ -1,0 +1,21 @@
+<li id="comment-li-<%= comment.id %>">
+  <div class="media mb-4">
+    <%= image_tag Settings.user.comment_avatar, class: "d-flex mr-3 rounded-circle" %>
+    <div class="media-body">
+      <h5 class="mt-0">Người dùng</h5>
+      <%= comment.content %>
+    </div>
+  </div>
+  <%= form_for [comment, Comment.new], remote: true do |f| %>
+    <%= f.text_area :content, placeholder: t("comment.reply_placeholder"),id: "content-text-#{comment.id}", class: "form-control" %>
+    <%= f.submit t("comment.reply-submit"), class: "btn btn-success"%>
+    <%= link_to comment, method: :delete, data: { confirm: t("comment.delete_confirm") },remote: true, class: "btn btn-danger" do %>
+      <i class="fa fa-trash-o"></i> <%= t "comment.delete_submit" %>
+    <% end %>
+  <% end %>
+  <ul class="nested-comment">
+    <div id="comment-nested-<%= comment.id %>">
+      <%= render partial: "comments/comment", collection: comment.comments.by_created_at %>
+    </div>
+  </ul>
+</li>

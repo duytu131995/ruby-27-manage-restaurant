@@ -1,0 +1,13 @@
+en:
+  comment:
+    reply-submit: "Reply"
+    reply_placeholder: "Add a reply"
+    delete_confirm: "Confirm delete"
+    delete_submit: "Delete"
+    title: "Comments"
+    placeholder: "Please input....."
+    btn-submit: "Post"
+    not_found: "No post not found"
+    success: "Comment success"
+    reply_success: "Reply success"
+    delete_success: "Delete success"

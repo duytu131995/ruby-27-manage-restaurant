@@ -1,0 +1,13 @@
+vi:
+  comment:
+    reply-submit: "Trả lời"
+    reply_placeholder: "Thêm trả lời"
+    delete_confirm: "Xác nhận xóa"
+    delete_submit: "Xóa"
+    title: "Bình luận"
+    placeholder: "Vui lòng nhập vào"
+    btn-submit: "Đăng bình luận"
+    not_found: "Không tìm thấy bài viết về món ăn này"
+    success: "Bình luận thành công"
+    reply_success: "Phản hồi thành công"
+    delete_success: "Xóa thành công"

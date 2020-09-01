@@ -33,6 +33,10 @@ Rails.application.routes.draw do
     resources :users
     resources :dishes do
       resources :reviews, except: %i(show index)
+      resources :comments, only: %i(new create destroy)
+    end
+    resources :comments do
+      resources :comments
     end
     resources :book_tables
     resources :dinner_tables

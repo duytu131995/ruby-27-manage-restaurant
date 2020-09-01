@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row search-content">
+    <div class="img-fluid">
+      <% if @dish.images.present? %>
+        <%= image_tag @dish.images.first.image.url %>
+      <% end %>
+      <p class="dish-review"><%= @dish.description %></p> 
+    </div>
+    <div class="comment-dish">
+      <div class="card my-4">
+        <h7 class="card-header"> <%= t "comment.title" %></h7>
+          <div class="card-body">
+            <%= form_for [@dish, Comment.new], remote: true do |f| %>
+              <%= f.text_area :content, placeholder: t("comment.placeholder"), id: "content-text", class: "form-control", required: true %>
+              <%= f.submit t("comment.btn-submit"), class: "btn btn-primary" %>
+            <% end %>
+          </div>
+        </div>
+    </div>
+    <ul class="comment">
+      <div id="comment-nested">
+        <%= render partial: "comments/comment", collection: @dish.comments.by_created_at %>
+      </div>
+    <ul>
+  </div>
+</div>
