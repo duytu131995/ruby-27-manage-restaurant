@@ -162,6 +162,7 @@ ActiveRecord::Schema.define(version: 2020_08_10_122217) do
     t.string "name"
     t.string "address"
     t.bigint "department_id"
+    t.integer "role", default: 2, null: false
     t.date "birthday"
     t.string "phone"
     t.integer "gender", default: 0, null: false
@@ -172,7 +173,6 @@ ActiveRecord::Schema.define(version: 2020_08_10_122217) do
     t.datetime "remember_created_at"
     t.datetime "deleted_at"
     t.integer "activated", limit: 1, default: 0
-    t.integer "role", default: 2, null: false
     t.index ["deleted_at"], name: "index_users_on_deleted_at"
     t.index ["department_id"], name: "index_users_on_department_id"
     t.index ["email"], name: "index_users_on_email", unique: true
