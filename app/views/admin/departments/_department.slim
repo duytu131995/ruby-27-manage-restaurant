@@ -1,0 +1,13 @@
+- @departments.each_with_index do |department, index|
+  tr.row-dp class=("row-department-#{department.id}")
+    th.row-id scope="row"
+    td.name
+      = department.name
+    td.description
+      = department.description
+    td.size
+      = department.users.size
+      = t ".staff"
+    td.status
+      = link_to t(".edit.title"), edit_admin_department_path(department), remote: true, class: "btn btn-warning"
+      = link_to t(".delete"), [:admin, department], method: :delete, class: "btn btn-danger destroy", data: {id: department.id}

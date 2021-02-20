@@ -1,8 +1,10 @@
 class Admin::DepartmentsController < AdminController
   before_action :find_department, only: %i(edit update destroy)
+  respond_to :html, :js, only: [:index]
 
   def index
-    @departments = Department.all
+    @departments = Department.page(params[:page]).per 2
+    respond_with @departments
   end
 
   def show; end

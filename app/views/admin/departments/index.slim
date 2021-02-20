@@ -1,0 +1,25 @@
+.list_departments
+  .notification
+  .top-title.clearfix
+    .title.float-left
+      h2
+        = t ".title_text"
+    .float-right
+      = link_to t(".title"), new_admin_department_path, remote: true, class: "btn btn-primary"
+  table.table.table-striped
+    thead
+      tr
+        th scope="col"
+          | #
+        th scope="col"
+          = t ".name_staff"
+        th scope="col"
+          = t ".description_staff"
+        th scope="col"
+          = t ".quantity_staff"
+        th scope="col"
+          = t ".action_staff"
+    tbody#department-tbody.tbody
+      = render "department"
+  = link_to "Load more", "departments?page=#{ @departments.current_page + 1 }", id: "load-more-departments", remote: true
+#myModal.modal

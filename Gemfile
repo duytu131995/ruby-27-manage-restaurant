@@ -34,6 +34,7 @@ gem "sidekiq"
 gem "sinatra", ">= 1.3.0", require: nil
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 4.0"
+gem "slim", "~> 4.1"
 
 group :development, :test do
   gem "database_cleaner"

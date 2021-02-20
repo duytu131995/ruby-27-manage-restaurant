@@ -1,0 +1,7 @@
+$("#department-tbody").append("<%= j render "department" %>");
+
+<% if @departments.last_page? %>
+  $("#load-more-departments").hide();
+<% else %>
+  $("#load-more-departments").attr("href", "departments?page=<%= @departments.current_page + 1 %>");
+<% end %>
